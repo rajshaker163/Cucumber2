@@ -5,13 +5,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+
+
 
 public class Hrms {
 	
-	public WebDriver driver;
+	WebDriver driver;
 
 @Given("open url")
 public void openApplication() {
@@ -22,12 +24,10 @@ public void openApplication() {
 		ChromeOptions n=new ChromeOptions();
 		n.addArguments("--remote-allow-origins=*");
 		driver=new ChromeDriver(n);
-		driver.get("http://183.82.103.245/nareshit/login.php");
-	    // Write code here that turns the phrase above into concrete actions
-	   // throw new io.cucumber.java.PendingException();
+		driver.get("url");
 	}
 
-	@When("enter username and Password")
+	@And("enter username and Password")
 	public void login()
 	{
 		driver.findElement(By.name("txtUserName")).sendKeys("nareshit");
@@ -35,8 +35,6 @@ public void openApplication() {
 		driver.findElement(By.name("Submit")).click();
 		System.out.println("enter login details");
 		
-	    // Write code here that turns the phrase above into concrete actions
-	   // throw new io.cucumber.java.PendingException();
 	}
 
 @Then("Click on logout")

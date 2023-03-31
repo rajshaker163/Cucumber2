@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Title not matchedOrangeHRM - New Level of HR Management]]>
+    </line>
+    <line>
+      <![CDATA[loginSucessfully]]>
+    </line>
+    <line>
+      <![CDATA[title Matched]]>
+    </line>
+    <line>
+      <![CDATA[logout]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2023-03-17T11:39:39Z" name="Default suite" finished-at="2023-03-17T11:41:11Z" duration-ms="92097">
+    <groups>
+    </groups>
+    <test started-at="2023-03-17T11:39:39Z" name="Default test" finished-at="2023-03-17T11:41:11Z" duration-ms="92097">
+      <class name="com.hrms.testscripts.TC01">
+        <test-method signature="tc01()[pri:0, instance:com.hrms.testscripts.TC01@416c58f5]" started-at="2023-03-17T11:39:39Z" name="tc01" finished-at="2023-03-17T11:41:11Z" duration-ms="91985" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Title not matchedOrangeHRM - New Level of HR Management]]>
+            </line>
+            <line>
+              <![CDATA[loginSucessfully]]>
+            </line>
+            <line>
+              <![CDATA[title Matched]]>
+            </line>
+            <line>
+              <![CDATA[logout]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tc01 -->
+      </class> <!-- com.hrms.testscripts.TC01 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

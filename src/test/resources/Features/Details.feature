@@ -1,7 +1,6 @@
-Feature: verify entered feilds
+Feature: Verify Entered fields
 
-  @Application
-  Scenario: verify entered feilds
+Scenario: Verify entered feilds
     Given open an application
     And enter username and  password
     And press the Submit button to login

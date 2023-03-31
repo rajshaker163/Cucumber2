@@ -4,71 +4,58 @@
   <artifactId>Cucumber</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <dependencies>
-<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>6.14.3</version>
-    <scope>test</scope>
-</dependency>
-<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm -->
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-jvm</artifactId>
-    <version>5.2.0</version>
-    <type>pom</type>
-</dependency>
-<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-core</artifactId>
-    <version>5.2.0</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+ <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
 <dependency>
     <groupId>io.cucumber</groupId>
     <artifactId>cucumber-java</artifactId>
-    <version>5.2.0</version>
+    <version>7.11.1</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
 <dependency>
     <groupId>io.cucumber</groupId>
     <artifactId>cucumber-junit</artifactId>
-    <version>5.2.0</version>
+    <version>7.11.1</version>
     <scope>test</scope>
 </dependency>
-<!-- https://mvnrepository.com/artifact/junit/junit -->
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
 <dependency>
-    <groupId>junit</groupId>
-    <artifactId>junit</artifactId>
-    <version>4.12</version>
-    <scope>test</scope>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-core</artifactId>
+    <version>7.11.1</version>
 </dependency>
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
 <dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>3.141.59</version>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-testng</artifactId>
+    <version>7.11.1</version>
 </dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.maven.surefire/surefire-junit47 -->
+<!-- https://mvnrepository.com/artifact/io.cucumber/tag-expressions -->
 <dependency>
-    <groupId>org.apache.maven.surefire</groupId>
-    <artifactId>surefire-junit47</artifactId>
-    <version>2.22.0</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
-<dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-surefire-plugin</artifactId>
-    <version>2.20</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
-<dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-compiler-plugin</artifactId>
-    <version>3.3</version>
+    <groupId>io.cucumber</groupId>
+    <artifactId>tag-expressions</artifactId>
+    <version>5.0.1</version>
 </dependency>
 
-  </dependencies>
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-html -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-html</artifactId>
+    <version>0.2.7</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/net.masterthought/maven-cucumber-reporting -->
+<dependency>
+    <groupId>net.masterthought</groupId>
+    <artifactId>maven-cucumber-reporting</artifactId>
+    <version>5.7.5</version>
+</dependency>
+
+
+
+
+
+		
+
+	</dependencies>
+
 </project>
 

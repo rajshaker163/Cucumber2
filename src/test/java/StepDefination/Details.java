@@ -12,112 +12,100 @@ import io.cucumber.java.en.Then;
 
 public class Details {
 	
-	public WebDriver driver;
-
+	WebDriver driver;
 	
-	@Given("open an application and enter the username and password")
-	public void open_an_application_and_enter_the_username_and_password() {
-		
+	@Given("open an application")
+	public void open_an_application() {
+	    // Write code here that turns the phrase above into concrete actions
+	   // throw new io.cucumber.java.PendingException();
 	System.setProperty("webdriver.chrome.driver","C:\\GD\\ch\\chromedriver.exe");
 		
 		ChromeOptions n=new ChromeOptions();
 		n.addArguments("--remote-allow-origins=*");
 		driver=new ChromeDriver(n);
 		driver.get("http://183.82.103.245/nareshit/login.php");
-	
-	    driver.findElement(By.name("txtUserName")).sendKeys("nareshit");
-	    
+	}
+
+	@And("enter username and  password")
+	public void enter_username_and_password() {
+	    // Write code here that turns the phrase above into concrete actions
+	   // throw new io.cucumber.java.PendingException();
+		driver.findElement(By.name("txtUserName")).sendKeys("nareshit");
 		driver.findElement(By.name("txtPassword")).sendKeys("nareshit");
-		//driver.findElement(By.name("Submit")).click();
-		
-		
-		
-		
-	    // Write code here that turns the phrase above into concrete actions
-	  //  throw new io.cucumber.java.PendingException();
 	}
 
-	@And("click on login button1 afte login sucesssfully")
-	public void click_on_login_button1_afte_login_sucesssfully() {
-		
+	@And("press the Submit button to login")
+	public void press_the_Submit_button_to_login() {
+	    // Write code here that turns the phrase above into concrete actions
+	   // throw new io.cucumber.java.PendingException();
 		driver.findElement(By.name("Submit")).click();
-	
-	    // Write code here that turns the phrase above into concrete actions
-	   // throw new io.cucumber.java.PendingException();
 	}
-	
-	//@And("Add into frames")
-	//public void add_into_frames() {
-		
-		//driver.switchTo().frame("rightMenu");
-	//}
-
-
-
-	@And("click on add button1")
-	public void click_on_add_button1() {
-		
-		driver.findElement(By.xpath("//input[@type='button']")).click();
-		  
-		
-		
-	    // Write code here that turns the phrase above into concrete actions
-	   // throw new io.cucumber.java.PendingException();
-	}
-	
-
-	@And("enter code Firstname Lastname Middlename and Nickname")
-	public void enter_code_Firstname_Lastname_Middlename_and_Nickname() {
-		
-		driver.findElement(By.name("txtEmployeeId")).sendKeys("000002");
-		driver.findElement(By.name("txtEmpLastName")).sendKeys("Selenium");
-		driver.findElement(By.name("txtEmpFirstName")).sendKeys("is");
-		driver.findElement(By.name("txtEmpFirstName")).sendKeys("very");
-		driver.findElement(By.name("txtEmpNickName")).sendKeys("easy");
-		
-	    // Write code here that turns the phrase above into concrete actions
-	   // throw new io.cucumber.java.PendingException();
-	}
-
-	@And("upload a pic")
-	public void upload_a_pic()throws Exception {
-		
-		WebElement fileInput=driver.findElement(By.id("photofile"));
-		//Actions action=findElement(By.xpath("//input[@type='file'][@id='photofile']")).
-		fileInput.sendKeys("‪D:\\New folder\\god.jpg.jpg");
-		Thread.sleep(2000);
-		
-	    // Write code  here that turns the phrase above into concrete actions
-	   // throw new io.cucumber.java.PendingException();
-	}
-
-	@And("click on save button1")
-	public void click_on_save_button1() {
-		
-		driver.findElement(By.id("btnEdit")).click();
-		
-	    // Write code here that turns the phrase above into concrete actions
-	   // throw new io.cucumber.java.PendingException();
-	}
-
-//@And("exit from frames")
-//public void exit_from_frames() {
-	//.switchTo().defaultContent();
-//}
-
-	@And("Logout")
-	public void logout() {
-		
-		driver.findElement(By.linkText("Logout")).click();
+	@And("Entered in to Frames")
+	public void entered_in_to_Frames() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
+		driver.switchTo().frame("rightMenu");
 	}
 
-	@Then("close Application")
-	public void close_Application() {
-		driver.close();
+	@And("click on add button")
+	public void click_on_add_button()throws Exception{
+	    // Write code here that turns the phrase above into concrete actions
+	   // throw new io.cucumber.java.PendingException();
+		driver.findElement(By.xpath("//input[@value='Add']")).click();
+		Thread.sleep(3000);
+	}
+	@And("enter all the data into a given feilds")
+	public void enter_all_the_data_into_a_given_feilds()throws Exception {
+		driver.findElement(By.name("txtEmployeeId")).clear();
+		Thread.sleep(3000);
+		driver.findElement(By.name("txtEmployeeId")).sendKeys("098765478");
+		Thread.sleep(3000);
+		driver.findElement(By.name("txtEmpLastName")).sendKeys("Raj");
+		driver.findElement(By.name("txtEmpFirstName")).sendKeys("shaker");
+		Thread.sleep(3000);
+		driver.findElement(By.name("txtEmpMiddleName")).sendKeys("Selenium");
+		driver.findElement(By.name("txtEmpNickName")).sendKeys("Selenium");
+	WebElement file=driver.findElement(By.xpath("//input[@type='file'][@name='photofile']"));
+	file.sendKeys("D:\\New folder\\god.jpg.jpg");
+		
+        
+		
+		
 	    // Write code here that turns the phrase above into concrete actions
 	   // throw new io.cucumber.java.PendingException();
 	}
+
+	@And("click on save button")
+	public void click_on_save_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    //throw new io.cucumber.java.PendingException();
+		driver.findElement(By.xpath("//input[@value='Save']")).click();
+	}
+
+	@And("Exit from frames")
+	public void exit_from_frames() {
+	    // Write code here that turns the phrase above into concrete actions
+	    //throw new io.cucumber.java.PendingException();
+		driver.switchTo().defaultContent();
+	}
+
+	@Then("Logout appication")
+	public void logout_appication() {
+	    // Write code here that turns the phrase above into concrete actions
+	    //throw new io.cucumber.java.PendingException();
+		driver.findElement(By.linkText("Logout")).click();
+	}
+	
+
+
+	@Then("Close the application")
+	public void close_the_application() {
+	    // Write code here that turns the phrase above into concrete actions
+	   // throw new io.cucumber.java.PendingException();
+		driver.close();
+	}
+
+
+	
 
 }
